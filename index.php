@@ -35,7 +35,12 @@
 
     $stmt = $pdo->prepare('INSERT INTO users (username,password,status) VALUES (:usern, :pssw, :sts)');
     
+    //bind 
 
+    $stmt ->bindparam(':usern', $usern);
+    $stmt ->bindparam(':pssw', $pssw);
+    $stmt ->bindparam(':sts', $sts);
+      
     //execute 
 
     $usern='antonio';
